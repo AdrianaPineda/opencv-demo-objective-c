@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		014679A225290A5B008857D1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 014679A125290A5B008857D1 /* AppDelegate.m */; };
 		014679A525290A5B008857D1 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 014679A425290A5B008857D1 /* SceneDelegate.m */; };
-		014679A825290A5B008857D1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 014679A725290A5B008857D1 /* ViewController.m */; };
+		014679A825290A5B008857D1 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 014679A725290A5B008857D1 /* ViewController.mm */; };
 		014679AB25290A5B008857D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 014679A925290A5B008857D1 /* Main.storyboard */; };
 		014679AD25290A5C008857D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 014679AC25290A5C008857D1 /* Assets.xcassets */; };
 		014679B025290A5C008857D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 014679AE25290A5C008857D1 /* LaunchScreen.storyboard */; };
@@ -24,12 +24,14 @@
 		014679A325290A5B008857D1 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		014679A425290A5B008857D1 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		014679A625290A5B008857D1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		014679A725290A5B008857D1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		014679A725290A5B008857D1 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		014679AA25290A5B008857D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		014679AC25290A5C008857D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		014679AF25290A5C008857D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		014679B125290A5C008857D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		014679B225290A5C008857D1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		014679BA25290E0E008857D1 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		014679BC25290E16008857D1 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		1B73579481E3796616BBEB18 /* Pods-OpenCVDemoObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenCVDemoObjC.release.xcconfig"; path = "Pods/Target Support Files/Pods-OpenCVDemoObjC/Pods-OpenCVDemoObjC.release.xcconfig"; sourceTree = "<group>"; };
 		99BCB911121B556485D76266 /* Pods-OpenCVDemoObjC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenCVDemoObjC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OpenCVDemoObjC/Pods-OpenCVDemoObjC.debug.xcconfig"; sourceTree = "<group>"; };
 		C5E22FF69D3706679B2835DF /* libPods-OpenCVDemoObjC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OpenCVDemoObjC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,7 +75,7 @@
 				014679A325290A5B008857D1 /* SceneDelegate.h */,
 				014679A425290A5B008857D1 /* SceneDelegate.m */,
 				014679A625290A5B008857D1 /* ViewController.h */,
-				014679A725290A5B008857D1 /* ViewController.m */,
+				014679A725290A5B008857D1 /* ViewController.mm */,
 				014679A925290A5B008857D1 /* Main.storyboard */,
 				014679AC25290A5C008857D1 /* Assets.xcassets */,
 				014679AE25290A5C008857D1 /* LaunchScreen.storyboard */,
@@ -95,6 +97,8 @@
 		BC9673C0D9509CE344DD9E59 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				014679BC25290E16008857D1 /* AssetsLibrary.framework */,
+				014679BA25290E0E008857D1 /* Accelerate.framework */,
 				C5E22FF69D3706679B2835DF /* libPods-OpenCVDemoObjC.a */,
 			);
 			name = Frameworks;
@@ -236,7 +240,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				014679A825290A5B008857D1 /* ViewController.m in Sources */,
+				014679A825290A5B008857D1 /* ViewController.mm in Sources */,
 				014679A225290A5B008857D1 /* AppDelegate.m in Sources */,
 				014679B325290A5C008857D1 /* main.m in Sources */,
 				014679A525290A5B008857D1 /* SceneDelegate.m in Sources */,
@@ -315,7 +319,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -367,7 +371,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

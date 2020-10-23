@@ -7,9 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <opencv2/videoio/cap_ios.h>
+using namespace cv;
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<CvVideoCameraDelegate>
 
+@property (strong, nonatomic) IBOutlet UILabel *openCVVersionLabel;
+@property (strong, nonatomic) IBOutlet UIImageView *cameraView;
+- (IBAction)startButtonClicked:(id)sender;
+- (IBAction)stopButtonClicked:(id)sender;
 
 @end
 
